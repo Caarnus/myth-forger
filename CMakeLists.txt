@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.31)
-project(myth_forger)
+project(MythForgerProject)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(myth_forger main.cpp)
+add_subdirectory(MythForger)
+add_subdirectory(Sandbox)
