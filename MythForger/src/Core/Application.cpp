@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <iostream>
-#include <Core/Application.h>
-#include <../../include/Utilities/PlatformDetection.h>
+#include "Application.h"
+#include "../Util/PlatformDetection.h"
 
 namespace MythForger {
     Application::Application() {

@@ -4,6 +4,7 @@ target_link_libraries(SandboxApp PRIVATE MythForger)
 
 target_include_directories(SandboxApp PRIVATE
         ${CMAKE_SOURCE_DIR}/MythForger/include
+        ${CMAKE_SOURCE_DIR}/MythForger/vendor/spdlog/include
 )
 
 add_custom_command(TARGET SandboxApp POST_BUILD
