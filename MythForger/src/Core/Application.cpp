@@ -1,7 +1,7 @@
+#include <mfpch.h>
 #include <Core/Application.h>
 
 #include <Events/ApplicationEvent.h>
-#include <Logger/Log.h>
 
 namespace MythForger {
     Application::Application() {

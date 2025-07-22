@@ -1,4 +1,4 @@
-#include <Logger/Log.h>
+#include <mfpch.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
 
 namespace MythForger {
