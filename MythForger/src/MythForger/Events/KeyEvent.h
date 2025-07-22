@@ -1,7 +1,7 @@
 #pragma once
 
-#include <Events/Event.h>
-#include <Core/KeyCodes.h>
+#include <MythForger/Events/Event.h>
+#include <MythForger/Core/KeyCodes.h>
 
 namespace MythForger {
 

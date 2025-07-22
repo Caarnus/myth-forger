@@ -4,6 +4,10 @@
 
 #include <memory>
 
+#if defined(MF_DEBUG_BUILD) || defined(MF_RELEASE_BUILD)
+        #define MF_ENABLE_ASSERTS
+#endif
+
 #ifdef MF_DEBUG
         #if defined(MF_PLATFORM_WINDOWS)
                 #define MF_DEBUGBREAK() _debugbreak()

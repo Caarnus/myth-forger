@@ -1,7 +1,7 @@
 #pragma once
 
-#include <Events/Event.h>
-#include <Core/MouseCodes.h>
+#include <MythForger/Events/Event.h>
+#include <MythForger/Core/MouseCodes.h>
 
 namespace MythForger {
     class MouseMovedEvent : public Event {

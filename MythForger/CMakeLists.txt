@@ -47,3 +47,8 @@ target_precompile_headers(MythForger PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src/mfp
 
 target_compile_definitions(MythForger PRIVATE MYTHFORGER_EXPORTS)
 target_compile_definitions(MythForger INTERFACE MYTHFORGER_LINKED)
+target_compile_definitions(MythForger PRIVATE
+        $<$<CONFIG:Debug>:MF_DEBUG_BUILD>
+        $<$<CONFIG:Release>:MF_RELEASE_BUILD>
+        $<$<CONFIG:Distribution>:MF_DIST_BUILD>
+)
