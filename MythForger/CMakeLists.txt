@@ -1,35 +1,47 @@
 set(SOURCES
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Core/Application.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Logger/Log.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/mfpch.cpp
+    src/MythForger/Core/Application.cpp
+    src/MythForger/Logger/Log.cpp
+    src/mfpch.cpp
+        src/Platform/Windows/WindowsWindow.cpp
+        src/Platform/Windows/WindowsWindow.h
 )
 
 set(HEADERS
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Core/Application.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Core/Base.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Core/Assert.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Core/KeyCodes.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Core/MouseCodes.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Core/EntryPoint.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Events/Event.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Events/KeyEvent.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Events/MouseEvent.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Events/ApplicationEvent.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Logger/Log.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Debug/Instrumentor.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Util/PlatformDetection.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/mfpch.h
+    src/MythForger/Core/Application.h
+    src/MythForger/Core/Base.h
+    src/MythForger/Core/Assert.h
+    src/MythForger/Core/KeyCodes.h
+    src/MythForger/Core/MouseCodes.h
+    src/MythForger/Core/EntryPoint.h
+    src/MythForger/Core/Window.h
+    src/MythForger/Events/Event.h
+    src/MythForger/Events/KeyEvent.h
+    src/MythForger/Events/MouseEvent.h
+    src/MythForger/Events/ApplicationEvent.h
+    src/MythForger/Logger/Log.h
+    src/MythForger/Debug/Instrumentor.h
+    src/MythForger/Util/PlatformDetection.h
+    src/mfpch.h
 )
+
+# Add vendor libraries
+add_subdirectory(vendor/glfw)
+add_subdirectory(vendor/glm)
+add_subdirectory(vendor/spdlog)
 
 add_library(MythForger SHARED ${SOURCES})
 target_sources(MythForger PRIVATE ${HEADERS})
 
 target_include_directories(MythForger PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/src
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-    ${CMAKE_CURRENT_SOURCE_DIR}/vendor/glm/glm
-    ${CMAKE_CURRENT_SOURCE_DIR}/vendor/spdlog/include
+    src
+    include
+    vendor/glfw/include/GLFW
+    vendor/glm/glm
+    vendor/spdlog/include
 )
+
+# Link to static vendor libs
+target_link_libraries(MythForger PRIVATE glfw glm spdlog)
 
 target_precompile_headers(MythForger PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src/mfpch.h)
 

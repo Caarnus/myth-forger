@@ -1,7 +1,7 @@
 #pragma once
 
-#include <Events/ApplicationEvent.h>
-#include <Events/Event.h>
+#include <MythForger/Events/ApplicationEvent.h>
+#include <MythForger/Events/Event.h>
 
 namespace MythForger {
     class WindowResizeEvent : public Event {

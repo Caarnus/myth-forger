@@ -7,3 +7,9 @@ add_custom_command(TARGET SandboxApp POST_BUILD
         $<TARGET_FILE:MythForger>
         $<TARGET_FILE_DIR:SandboxApp>
 )
+
+if(UNIX)
+    set_target_properties(SandboxApp PROPERTIES
+            BUILD_RPATH "$ORIGIN"
+    )
+endif()

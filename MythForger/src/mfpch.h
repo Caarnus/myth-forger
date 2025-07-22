@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Util/PlatformDetection.h"
+#include "MythForger/Util/PlatformDetection.h"
 
 #ifdef MF_PLATFORM_WINDOWS
     #ifndef NOMINMAX
@@ -20,11 +20,11 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "Core/Base.h"
+#include "MythForger/Core/Base.h"
 
-#include "Logger/Log.h"
+#include "MythForger/Logger/Log.h"
 
-#include "Debug/Instrumentor.h"
+#include "MythForger/Debug/Instrumentor.h"
 
 #ifdef MF_PLATFORM_WINDOWS
     #include <Windows.h>

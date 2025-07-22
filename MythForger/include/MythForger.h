@@ -1,10 +1,10 @@
 #pragma once
 
-#include <Core/Application.h>
-#include <Logger/Log.h>
-#include <Events/Event.h>
-#include <Debug/Instrumentor.h>
+#include <MythForger/Core/Application.h>
+#include <MythForger/Logger/Log.h>
+#include <MythForger/Events/Event.h>
+#include <MythForger/Debug/Instrumentor.h>
 
 // ENTRY POINT -----------------------
-#include <Core/EntryPoint.h>
+#include <MythForger/Core/EntryPoint.h>
 // -----------------------------------

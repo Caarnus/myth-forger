@@ -1,7 +1,7 @@
 #pragma once
 
-#include <Core/Base.h>
-#include <Logger/Log.h>
+#include <MythForger/Core/Base.h>
+#include <MythForger/Logger/Log.h>
 #include <filesystem>
 
 #ifdef MF_ENABLE_ASSERTS

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <Debug/Instrumentor.h>
-#include <Core/Base.h>
+#include <MythForger/Debug/Instrumentor.h>
+#include <MythForger/Core/Base.h>
 #include <spdlog/fmt/ostr.h>
 
 #include <functional>

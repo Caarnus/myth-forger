@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Util/PlatformDetection.h>
+#include <MythForger/Util/PlatformDetection.h>
 
 #include <memory>
 
@@ -43,5 +43,5 @@ namespace MythForger {
         }
 }
 
-#include <Logger/Log.h>
-#include <Core/Assert.h>
+#include <MythForger/Logger/Log.h>
+#include <MythForger/Core/Assert.h>

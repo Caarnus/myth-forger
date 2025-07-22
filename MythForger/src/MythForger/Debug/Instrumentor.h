@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Logger/Log.h>
+#include <MythForger/Logger/Log.h>
 
 #include <algorithm>
 #include <chrono>
