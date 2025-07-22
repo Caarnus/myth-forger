@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../src/Core/Application.h"
-#include "../src/Logger/Log.h"
+#include <Core/Application.h>
+#include <Logger/Log.h>
+#include <Events/Event.h>
+#include <Debug/Instrumentor.h>
 
-// ENTRY POINT
-#include "../src/Core/EntryPoint.h"
-//
+// ENTRY POINT -----------------------
+#include <Core/EntryPoint.h>
+// -----------------------------------

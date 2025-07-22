@@ -1,13 +1,12 @@
 #pragma once
-#include "Core.h"
+#include <Core/Base.h>
 
 namespace MythForger {
-    class MYTHFORGER_API Application {
+    class Application {
         public:
             Application();
             virtual ~Application();
             void Run();
-            void Print();
     };
 
     // To be defined in client

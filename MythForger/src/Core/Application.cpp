@@ -1,7 +1,7 @@
-#include <cstdio>
-#include <iostream>
-#include "Application.h"
-#include "../Util/PlatformDetection.h"
+#include <Core/Application.h>
+
+#include <Events/ApplicationEvent.h>
+#include <Logger/Log.h>
 
 namespace MythForger {
     Application::Application() {
@@ -11,11 +11,12 @@ namespace MythForger {
     }
 
     void Application::Run() {
-        while (true);
-    }
+        WindowResizeEvent e(1280, 720);
+        if (e.IsInCategory(EventCategoryApplication))
+            MF_TRACE(e.ToString());
+        if (e.IsInCategory(EventCategoryInput))
+            MF_TRACE(e.ToString());
 
-    void Application::Print() {
-        printf("Welcome to MythForger!\n");
-        std::cout << "Running on " << MYTH_PLATFORM_NAME << "\n";
+        while (true);
     }
 }
